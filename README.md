@@ -14,9 +14,6 @@
 
 Hacktoberfest is a month-long celebration of open source software run by DigitalOcean. It's an opportunity for everyone, from seasoned developers to open-source newcomers, to come together and contribute to open source projects.
 
-<div align="center">
-  <img src="https://github.com/OpenSourceTogether/Hacktoberfest-2020/blob/master/assets/hacktoberfest-2020.png?raw=true" alt="Hacktoberfest Illustration" width="600px">
-</div>
 
 ### 📅 Key Dates
 - **Preparation**: September 2024
