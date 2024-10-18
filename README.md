@@ -27,9 +27,6 @@ Hacktoberfest is a month-long celebration of open source software run by Digital
 3. **Learn**: Engage with the community and improve your skills.
 4. **Earn**: Receive a digital badge that levels up with each accepted contribution.
 
-<div align="center">
-  <img src="https://hacktoberfest.com/_next/static/media/landing-page-illustration.f868c2a3.svg" alt="Contribution Illustration" width="400px">
-</div>
 
 ## 🎨 This Year's Theme
 
