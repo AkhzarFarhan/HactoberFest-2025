@@ -1,0 +1,54 @@
+body {
+    background-image: url(images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-div {
+    display: flex;
+    word-spacing: 12px;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 200px;
+    flex-wrap: wrap;
+}
+
+h1 {
+    color: rgb(238, 238, 238);
+}
+
+.mint-head, .sec-head, .milisec-head {
+    text-decoration: underline rgb(243, 12, 12);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.set1, .set2, .set3 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    padding: 14px;
+}
+
+@media only screen and (max-width:550px) {
+    .set1, .set2, .set3 {
+        font-size: small;
+    }
+}
+
+@media only screen and (max-width:452px) {
+    .set1, .set2, .set3 {
+        font-size: smaller;
+        padding: 5px;
+    }
+}
+
+.button {
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    background-color: transparent;
+    color: rgb(238, 238, 238);
+    border: 3px solid rgb(243, 12, 12);
+    border-radius: 20px;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Montserrat:700,400);
+    *, *:before, *:after {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 1em 2em;
+      line-height: 1.5;
+      background-color: #EAEAEA;
+      color: #001331;
+      text-align: left;
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    p {
+      max-width: 40em;
+    }
+    
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      cursor: help;
+      border-color: #001331;
+      border-bottom: 1px dotted rgba(0, 19, 49, 0.9);
+      background-color: #EAEADE;
+      background-color: rgba(255, 255, 0, 0.05);
+    }
+    .tooltip:after {
+      content: attr(data-tip);
+      position: absolute;
+      bottom: 24px;
+      left: -10px;
+      min-width: 100px;
+      max-width: 300px;
+      padding: 5px 7px 5px 10px;
+      pointer-events: none;
+      font-size: .75em;
+      background-color: #001331;
+      background-color: rgba(0, 19, 49, 0.9);
+      color: #FFF;
+      border-radius: 2px;
+    }
+    .tooltip:before {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      left: 5px;
+      bottom: 18px;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 6px solid #001331;
+      border-top: 6px solid rgba(0, 19, 49, 0.9);
+    }
+    .tooltip:before, .tooltip:after {
+      display: block;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.2s ease-out, margin 0.2s ease-out;
+    }
+    .tooltip:hover {
+      color: #999;
+    }
+    .tooltip:hover:before, .tooltip:hover:after {
+      opacity: 1;
+      margin-bottom: 3px;
+      visibility: visible;
+    }
+    
+    .tooltip-bottom:after {
+      top: 24px;
+    }
+    .tooltip-bottom:before {
+      top: 18px;
+      border-top: 0;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid #001331;
+      border-bottom: 6px solid rgba(0, 19, 49, 0.9);
+    }
+    .tooltip-bottom:hover:before, .tooltip-bottom:hover:after {
+      bottom: auto;
+      margin-bottom: 0;
+      margin-top: 3px;
+    }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <p>
+    This is just some filler text, but
+    <span class="tooltip tooltip-bottom" data-tip="yay, tooltip content! created by vishnu artzzr >this thing has a tooltip</span> and here we have more filler text. 
+    </p>
+    <p>
+    <span class="tooltip" data-tip="yay, bottom tooltip content! created by vishnu artzzr>this thing has a tooltip</span> and here we have more filler text. Ut enim ad minim veniam, <span class="tooltip" data-tip="yay, bottom content! crreated by vishnu artzzr">name</span> hey  you can test it right here fot the result
+    </p><a target="_blank" href="https:https://github.com/vishnuartzzr." style="font-size: 8pt; text-decoration: none;font-family:Tahoma">artzzrcodes</a>

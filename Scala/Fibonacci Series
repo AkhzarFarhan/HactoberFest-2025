@@ -1,0 +1,22 @@
+import scala.collection.mutable
+
+object Fibonacci {
+  
+  val memo: mutable.Map[Int, BigInt] = mutable.Map(0 -> 0, 1 -> 1)
+  
+  def fibonacci(n: Int): BigInt = {
+    if (memo.contains(n)) memo(n)
+    else {
+      val result = fibonacci(n - 1) + fibonacci(n - 2)
+      memo(n) = result
+      result
+    }
+  }
+
+  def main(args: Array[String]): Unit = {
+    println("Enter a number:")
+    val num = scala.io.StdIn.readInt()
+    println(s"Fibonacci sequence up to $num:")
+    (0 to num).foreach(n => println(s"F($n) = ${fibonacci(n)}"))
+  }
+}

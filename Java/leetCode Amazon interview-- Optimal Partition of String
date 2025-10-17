@@ -1,0 +1,17 @@
+class Solution {
+    public int partitionString(String s) {
+        int substringCount = 1; // Start with one substring
+        HashSet<Character> seenChars = new HashSet<>(); // To store characters in the current substring
+
+        for (char c : s.toCharArray()) {
+            // If character is already in the current substring, start a new one
+            if (seenChars.contains(c)) {
+                substringCount++;
+                seenChars.clear(); // Clear set for the new substring
+            }
+            seenChars.add(c); // Add character to the current substring
+        }
+        
+        return substringCount;
+    }
+}
