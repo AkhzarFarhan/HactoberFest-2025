@@ -5,7 +5,7 @@ def fib(number_of_terms):
    second = 1
    temp = 0
 
-   while counter <= number_of_terms:
+   while counter < number_of_terms:
       print(first)
       temp = first + second
       first = second
