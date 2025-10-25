@@ -1,23 +1,26 @@
 import java.util.Scanner;
 
-public class factorial {
-  public static void main(String[] args) {
-    int number;
-    System.out.println("Java program to find factorial of a number");
-    // read the number using scanner class
-    System.out.println("Enter a number to find its factorial:");
-    Scanner stdin = new Scanner(System.in);
-    number = stdin.nextInt();
+public class Factorial {
+    public static void main(String[] args) {
+        Scanner stdin = new Scanner(System.in);
+        System.out.println("Java program to find factorial of a number");
 
-    long fac = factorial(number);
-    System.out.println("Factorial of " + number + " is " + fac);
-  }
+        // Read the number from the user
+        System.out.print("Enter a number to find its factorial: ");
+        int number = stdin.nextInt();
 
-  public long factorial(int fac) {
-    long factorial = 1;
-    for (int i = 1; i <= number; i++) {
-      factorial = factorial * i;
+        long fac = factorial(number); // Call static method
+        System.out.println("Factorial of " + number + " is " + fac);
+
+        stdin.close();
     }
-    return factorial;
-  }
+
+    // Static method to calculate factorial
+    public static long factorial(int n) {
+        long factorial = 1;
+        for (int i = 1; i <= n; i++) {
+            factorial *= i;
+        }
+        return factorial;
+    }
 }
