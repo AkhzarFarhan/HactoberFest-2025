@@ -1,0 +1,23 @@
+Bill_No,Bill_Date,Name,City,Item_Name,Qty,item_price,Total_Price
+1,24-08-2022,Raju,vapi,Oral B Brush ,5,50,250
+2,25-08-2022,Rohan,daman, Closup Toothpaste,5,75,375
+3,26-09-2022,Manan,valsad, Classmates Books,2,100,200
+4,19-10-2022,Apexa,bhilad,Natraj Pencils,10,8,80
+5,20-11-2022,Amar,palsana,Natraj Erasers,5,25,125
+6,10-11-2022,Ajay,pardi,Cinthol Soaps,10,125,1250
+7,14-12-2022,Rishab,udvada, Lays Waffers,3,20,60
+8,19-02-2023,Vinay,atul,Camlin Whitner,2,250,500
+9,12-03-2023,Ramesh,retlav, Nirma Washing Powder,5,100,500
+10,13-03-2023,Rajiv,tookwada,Mayo tubs,1,300,300
+11,14-04-2023,Abhishek,chala,Writing Pad,3,30,90
+12,15-04-2023,Amish,chiri,Sky Bags,1,750,750
+13,16-04-2023,Anjal,kocharwa,Classmate Sharpner,8,45,360
+14,17-04-2023,Kiran,karambili,Sprite Coldrink,10,120,1200
+15,18-05-2023,Komal,kopaarli,Cadbury Dairymilk,2,350,700
+16,19-05-2023,Khushi,dungri, Vaddilal Ice Creams,2,50,100
+17,20-05-2023,sneha,daang, Sunflower Edible Oil,2,1150,2300
+18,21-06-2023,Priya,umargam,Polycab Wires,3,900,2700
+19,22-06-2023,Pallavi,sanjan,Kellogs Corn Flour,2,50,100
+20,23-07-2023,Ravi,gunjan,Center Fresh Chewing Gums,5,20,100
+21,2023-10-04,Ramesh,Retlav,Brushes,5,20,100
+21,2023-10-04,Ramesh,Retlav,Waffers,5,15,75
