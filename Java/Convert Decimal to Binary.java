@@ -1,19 +1,27 @@
 import java.util.Scanner;
 
-class ConvertToBinary {
-  public static void main(String[] args) {
-    Scanner dtpe = new Scanner(System.in);
-    System.out.println("Enter a no.");
-    int a = dtpe.nextInt();
-    int binary[] = new int[1000];
-    int c = 0;
-    while (a > 0) {
-      int d = a % 2;
-      binary[c] = d;
-      a = (int) a / 2;
-      c++;
+public class ConvertToBinary {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int number = sc.nextInt();
+
+        // Call method to convert to binary
+        String binary = toBinary(number);
+        System.out.println("Binary representation: " + binary);
+
+        sc.close();
     }
 
-    for (int x = c - 1; x >= 0; x--) System.out.print(binary[x] + " ");
-  }
+    // Method to convert decimal number to binary
+    public static String toBinary(int n) {
+        if (n == 0) return "0";
+
+        StringBuilder binary = new StringBuilder();
+        while (n > 0) {
+            binary.insert(0, n % 2); // prepend remainder
+            n /= 2;
+        }
+        return binary.toString();
+    }
 }

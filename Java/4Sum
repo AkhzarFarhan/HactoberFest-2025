@@ -1,31 +1,56 @@
+#include <bits/stdc++.h>
+using namespace std;
+
 class Solution {
 public:
     vector<vector<int>> fourSum(vector<int>& nums, int target) {
         int n = nums.size();
-        sort(nums.begin(), nums.end());
+        sort(nums.begin(), nums.end()); // Sort the array for two-pointer approach
         vector<vector<int>> output;
-        for(int i=0; i<n-3; i++){
-            for(int j=i+1; j<n-2; j++){
+
+        for (int i = 0; i < n - 3; i++) {
+            if (i > 0 && nums[i] == nums[i - 1]) continue; // Skip duplicates for i
+
+            for (int j = i + 1; j < n - 2; j++) {
+                if (j > i + 1 && nums[j] == nums[j - 1]) continue; // Skip duplicates for j
+
                 long long newTarget = (long long)target - (long long)nums[i] - (long long)nums[j];
-                int low = j+1, high = n-1;
-                while(low < high){
-                    if(nums[low] + nums[high] < newTarget){
+                int low = j + 1, high = n - 1;
+
+                while (low < high) {
+                    long long sum = (long long)nums[low] + (long long)nums[high];
+                    if (sum < newTarget) {
                         low++;
-                    }
-                    else if(nums[low] + nums[high] > newTarget){
+                    } else if (sum > newTarget) {
                         high--;
-                    }
-                    else{
+                    } else {
                         output.push_back({nums[i], nums[j], nums[low], nums[high]});
-                        int tempIndex1 = low, tempIndex2 = high;
-                        while(low < high && nums[low] == nums[tempIndex1]) low++;
-                        while(low < high && nums[high] == nums[tempIndex2]) high--;
+
+                        // Skip duplicates for low and high
+                        int tempLow = nums[low], tempHigh = nums[high];
+                        while (low < high && nums[low] == tempLow) low++;
+                        while (low < high && nums[high] == tempHigh) high--;
                     }
                 }
-                while(j+1 < n && nums[j] == nums[j+1]) j++;
             }
-            while(i+1 < n && nums[i] == nums[i+1]) i++;
         }
         return output;
     }
 };
+
+// Example usage
+int main() {
+    Solution sol;
+    vector<int> nums = {1, 0, -1, 0, -2, 2};
+    int target = 0;
+
+    vector<vector<int>> res = sol.fourSum(nums, target);
+
+    for (auto &quad : res) {
+        for (int num : quad) {
+            cout << num << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
